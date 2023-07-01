@@ -1,0 +1,81 @@
+.navbar {
+    background-color: rgb(255, 255, 255);
+    padding: 17px;
+  }
+  
+  
+  .navbar-nav {
+    display:flow-root;
+    font-size:x-large;
+    text-align: left;
+    margin-left: 120px;
+
+  }
+  .Logo{
+    position:absolute;
+    height: 70px;
+    width: 70px;
+    left: 20px;
+   
+    margin-top: -20px;
+  }
+  .carrito{
+    position:absolute;
+    right: 99px;
+    margin-top: -20px;
+    width: 30px;
+    height: 30px;
+    
+  }
+
+  .count{
+   
+  font-size: x-large;
+  margin-right: 40px;
+  margin-top: -296px;
+  color: rgb(75, 73, 73);
+  margin-left: 900px;
+
+  }
+
+  .bt1, .bt2{
+    font-size: large;
+    margin-top: 250px;
+ 
+ 
+  
+    }
+  .App{
+  
+    height: 100vh;
+    width: 100vw;
+    background-size:auto;
+    
+  }
+
+  .electricas{
+   font-family: 'Times New Roman', Times, serif;
+   color: rgb(62, 62, 65);
+  }
+  .componente1{
+    color: rgb(255, 255, 255);
+  }
+ .producto{
+  margin-top: 50px;
+  height: 200px;
+  width: 200px;
+
+ }
+
+ .info{
+  font-size: xx-large;
+  color: rgb(255, 255, 255);
+ }
+
+ 
+ 
+  
+ 
+  
+  
+  
