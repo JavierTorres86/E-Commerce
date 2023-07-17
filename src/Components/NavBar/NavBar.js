@@ -16,7 +16,7 @@ import { NavLink } from 'react-router-dom';
                <NavLink to='/home' className='logoContainer'> 
                  <img class="Logo" src = "https://images.ctfassets.net/m8onsx4mm13s/72p8qgeqA4UK7FD2MwyA19/cbc4a71ff92b788b791a53fa683dc6f4/gibson__1_.svg"  alt = "Logo" /> 
                </NavLink>
-                <Nav className="me-auto"> 
+                <Nav className="me-auto">
                   <NavLink to="/electricas"className ='electricas'>Electricas </NavLink>
                   <NavLink to='/acusticas' className ='electricas'>Acusticas </NavLink>
                   <NavLink to='/accesorios' className ='electricas'>Accesorios</NavLink>

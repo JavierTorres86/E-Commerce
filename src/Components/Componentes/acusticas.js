@@ -1,6 +1,6 @@
 import React from 'react'
-import Producto from './Producto';
 import data from './Productos/arrayProductos.json';
+import Item from '../ItemListContainer/Item';
 
 const Acusticas = () => {
 const gacusticas = data.filter((p) => p.category=== 'acusticas');
@@ -9,7 +9,7 @@ const gacusticas = data.filter((p) => p.category=== 'acusticas');
       {gacusticas.map((p)=>{   
         return(
           <div>
-            <Producto
+            <Item
               key={p.id}
               name={p.name}
               description={p.description}

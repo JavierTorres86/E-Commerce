@@ -1,6 +1,6 @@
 import React from 'react'
-import Producto from './Producto';
 import data from './Productos/arrayProductos.json';
+import Item from '../ItemListContainer/Item';
 
 const Electricas = () => {
 const gelectricas = data.filter((p) => p.category=== 'electricas');
@@ -9,7 +9,7 @@ const gelectricas = data.filter((p) => p.category=== 'electricas');
       {gelectricas.map((p)=>{   
         return(
           <div>
-            <Producto
+            <Item
               key={p.id}
               name={p.name}
               description={p.description}

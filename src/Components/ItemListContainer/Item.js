@@ -1,11 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Producto = ({ id, image, name, description, price, category }) => {
-  console.log(id)
+const Item = ({ id, image, name, description, price, category }) => {
   return (
-    <div>
-      <NavLink to={`/${category}/${id}`} className='logoCarrito'>                                   
+    <div className='info'>
+      <NavLink to={`/${category}/${id}`} className='logoCarrito' >                                   
         <img className='producto' src={image} alt={name} />
       </NavLink>
       <h3 className='infopantalla'>{name}</h3>
@@ -15,4 +14,4 @@ const Producto = ({ id, image, name, description, price, category }) => {
   );
 };
 
-export default Producto;
+export default Item ;
