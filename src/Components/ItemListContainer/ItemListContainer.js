@@ -1,25 +1,36 @@
 import React from 'react'
-import data from "../Componentes/Productos/arrayProductos.json";
-import Item from './Item';
-const ItemListContainer = ()=>{
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import arrayProductos from '../Componentes/Json/arrayProductos.json';
+import ItemList from '../ItemList/ItemList';
+
+
+const ItemListContainer = () => {
+     const [item, setItem] = useState([]);
+     const {id} = useParams();
+   useEffect(()=>{
+     const fetchData = async()=>{
+        try{
+        const data = await new Promise((resolve)=>{
+        setTimeout(()=>{
+        resolve(id ? arrayProductos.filter(item=> item.category === id) : arrayProductos)
+       }, );
+        });
+        setItem(data);
+      }catch(error){
+      }
+    };
+    fetchData();
+     }, [id])
+
   return (
     <div className='muestra'>
-      {data.map((p)=>{
-        return(
-          <div>             
-            <Item
-              key={p.id}
-              name={p.name}
-              description={p.description}
-              stock={p.stock}
-              image={p.image}
-              price={p.price}
-              id={p.id}
-              category={p.category}
-             />        
-          </div>     
+      <div className='muestra'>
+       <ItemList item={item}/>
+      </div>
+      
+    </div>
   )
-})}
-</div>
-  )};
+}
+
 export default ItemListContainer
