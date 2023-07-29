@@ -11,7 +11,7 @@ const Item = ({item}) => {
            </Link>
             <div className=''>
             <p className='infopantalla1'>{item.name}</p>
-            <p className='infopantalla2'>{item.price}</p>
+            <p className='infopantalla2'>U$S {item.price}</p>
             </div>
                       
     

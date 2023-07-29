@@ -1,27 +1,27 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import arrayProductos from '../Componentes/Json/arrayProductos.json';
 import ItemList from '../ItemList/ItemList';
-
+import {getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
 
 const ItemListContainer = () => {
      const [item, setItem] = useState([]);
      const {id} = useParams();
+
    useEffect(()=>{
-     const fetchData = async()=>{
-        try{
-        const data = await new Promise((resolve)=>{
-        setTimeout(()=>{
-        resolve(id ? arrayProductos.filter(item=> item.category === id) : arrayProductos)
-       }, );
-        });
-        setItem(data);
-      }catch(error){
-      }
-    };
-    fetchData();
-     }, [id])
+    const querydb = getFirestore();
+    const queryCollection = collection(querydb, 'Items');
+    let filtroQuery;
+
+    if (id) {
+      const filtroCategory = where('category', '==', id);
+      filtroQuery = query(queryCollection, filtroCategory);
+    } else {
+      filtroQuery = queryCollection;
+    }
+    getDocs(filtroQuery)
+      .then((res) => setItem(res.docs.map((p) => ({ id: p.id, ...p.data() }))));
+  }, [id]);
 
   return (
     <div className='muestra'>

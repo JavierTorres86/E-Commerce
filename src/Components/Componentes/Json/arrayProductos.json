@@ -10,7 +10,7 @@
 {"id":9, "name":"Gibson Picks x6 ", "description": "Pua 0.73mm.", "image":"https://images.ctfassets.net/m8onsx4mm13s/4bK0P9WoFR0CJs08Kfkwya/ed385da0f63282a74bae8d98ef26879a/__static.gibson.com_product-images_Gibson_APRM6_APRM6-73_front.png?w=400","stock":10, "category":"accesorios","price":"U$S 12"},
 {"id":10, "name":"Cable 20Ft ", "description": "Cable para instumentos", "image":"https://images.ctfassets.net/m8onsx4mm13s/1KgBK5tOQlNH2IWrYVDdzZ/d9931c22a62a4420dc01a0679f34588d/__static.gibson.com_product-images_Gibson_CAB20-GRY_CAB20-GRY_front.png?w=400","stock":10, "category":"accesorios","price":"U$S 32"},
 {"id":11, "name":"Gibson 12 Cuerdas ", "description": "Acoustic 12 cuerdas", "image":"https://marinimport.com.pe/wp-content/uploads/2021/12/L84175000001000-00-1600x1600-1.webp","stock":10, "category":"acusticas","price":"U$S 4500"},
-{"id":12, "name":"Gibson Deluxe Case ", "description": "Les Paul Deluxe Case .", "image":"https://www.stars-music.com/medias/gibson/es-339-guitar-case-classic-brown-600-152211.jpg","stock":10, "category":"accesorios","price":"U$S 350"},
+{"id":12, "name":"Gibson Deluxe Case ", "description": "Les Paul Deluxe Case.", "image":"https://www.stars-music.com/medias/gibson/es-339-guitar-case-classic-brown-600-152211.jpg","stock":10, "category":"accesorios","price":"U$S 350"},
 {"id":13, "name":"Gibson Headstock Turner ", "description": "Afinador de guitarras", "image":"https://images.ctfassets.net/m8onsx4mm13s/3Qwylk1g2erypM5dUO0CAP/47fe8054757ed07b32e2aace5381dbd7/GA-TUNER_display_500x500.png?w=400","stock":10, "category":"accesorios","price":"U$S 50"}
 
 

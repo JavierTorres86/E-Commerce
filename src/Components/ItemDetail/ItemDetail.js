@@ -7,7 +7,7 @@ const ItemDetail = ({item}) => {
         <img src={item.image} className='producto1'alt={item.name}/>
         <h2 className='infopantalla3'>{item.name}</h2>
         <p  className='infopantalla3'>{item.description}</p>
-        <p  className='infopantalla3'> {item.price}</p>
+        <p  className='infopantalla3'> U$S{item.price}</p>
         <p  className='infopantalla3'> Cantidad: {item.stock}</p>
   
      <div>
