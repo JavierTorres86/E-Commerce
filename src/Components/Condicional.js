@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Logout } from './Logout';
-import Spiner from './Spiner';
+import { Spinner } from 'react-bootstrap';
 
 const Condicional = () => {
     const[condicion, setCondicion] = useState(true);
@@ -9,7 +9,7 @@ const Condicional = () => {
     <div>
         <h2>Renderizado con ternario</h2>
         <button onClick={()=>setCondicion(!condicion)}>Iniciar Sesion / Salir</button>
-        <p>{condicion ?<Spiner/> : <Logout/>}</p>
+        <p>{condicion ?<Spinner/> : <Logout/>}</p>
     </div>
   )
 }

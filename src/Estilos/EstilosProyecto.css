@@ -1,7 +1,7 @@
   /* estilo componentes de la barra*/
 
 .navbar {
-    background-color: rgb(37, 36, 36);
+    background-color:#281c24 ;
     padding: 17px;
   }
   
@@ -32,9 +32,23 @@
   .carrito{
     position:absolute;
     right: 99px;
-    margin-top: -5px;
+    margin-top: -20px;
     width: 30px;
     height: 30px;  
+  }
+  .carrito2 {
+    position: absolute; /* Change to absolute */
+    margin-top: -20px;
+    right: 65px; /* Adjust this value as needed to align it with the cart icon */
+    transform: translate(0, 0%); /* Center the span vertically */
+    background-color: rgb(255, 255, 255); /* Just for visibility */
+    border-radius: 50%; /* Make it circular */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
   }
   .cartcount{
     color: white;
@@ -49,7 +63,7 @@
 /*estilos del contador*/
 
 .count {
- margin-left: 10px;
+  margin-left: 39%;
 }
 
 .bt1 {
@@ -194,6 +208,17 @@ border-radius: 5px;
   margin-left: 90px;
   
   }
+  .producto2{
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+    padding:8px;
+    background-color: #f5f5f5;
+    border: 1px solid #999999;
+    position: relative;
+    border-radius: 5px;
+    
+    }
  
   .productoseleccionado {
     background-color: #ffffff;

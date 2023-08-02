@@ -1,36 +1,36 @@
-import React from 'react'
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList';
-import {getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
+import Spinner from '../../Components/Spinner/Spiner';
+import { useParams } from 'react-router-dom';
+import { collection, getDocs, getFirestore,query, where } from 'firebase/firestore';
 
 const ItemListContainer = () => {
-     const [item, setItem] = useState([]);
-     const {id} = useParams();
 
-   useEffect(()=>{
+  const { id } = useParams()
+
+  const [items, setItems] = useState() 
+  const [load, setLoad] = useState(true) 
+
+  const getData = async (id) => {
+    setLoad(true)
     const querydb = getFirestore();
-    const queryCollection = collection(querydb, 'Items');
-    let filtroQuery;
+    const queryCollection = id ? query(collection(querydb, 'Items'), where("category", "==", id))
+      : collection(querydb, 'Items');
+    const resultado = await getDocs(queryCollection)
+    const datos = resultado.docs.map(p => ({ id: p.id, ...p.data() }))
+    setItems(datos)
+    setLoad(false)
+  }
 
-    if (id) {
-      const filtroCategory = where('category', '==', id);
-      filtroQuery = query(queryCollection, filtroCategory);
-    } else {
-      filtroQuery = queryCollection;
-    }
-    getDocs(filtroQuery)
-      .then((res) => setItem(res.docs.map((p) => ({ id: p.id, ...p.data() }))));
-  }, [id]);
+  useEffect(() => {
+    getData(id)
+  }, [id])
 
   return (
-    <div className='muestra'>
-      <div className='muestra'>
-       <ItemList item={item}/>
-      </div>
-      
-    </div>
-  )
-}
+    <>
+      {load ? <Spinner /> : <ItemList data={items} />}
+    </>
+  );
+};
 
-export default ItemListContainer
+export default ItemListContainer;
