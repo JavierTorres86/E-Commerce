@@ -10,7 +10,8 @@ const ItemList = ({ data }) => {
                   item={i}
                   name={i.name} 
                   key={i.id} 
-                  id={i.id} image={i.image} 
+                  id={i.id} 
+                  image={i.image} 
                   price={i.price}/>))}
            
         </div>

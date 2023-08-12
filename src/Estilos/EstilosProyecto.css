@@ -1,9 +1,14 @@
-  /* estilo componentes de la barra*/
+/* EstilosProyecto.css */
 
 .navbar {
-    background-color:#281c24 ;
-    padding: 17px;
-  }
+  background-color: #281c24;
+  padding: 17px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
   
   .navbar-nav {
     display:flow-root;
@@ -37,12 +42,12 @@
     height: 30px;  
   }
   .carrito2 {
-    position: absolute; /* Change to absolute */
+    position: absolute; 
     margin-top: -20px;
-    right: 65px; /* Adjust this value as needed to align it with the cart icon */
-    transform: translate(0, 0%); /* Center the span vertically */
-    background-color: rgb(255, 255, 255); /* Just for visibility */
-    border-radius: 50%; /* Make it circular */
+    right: 65px; 
+    transform: translate(0, 0%);
+    background-color: rgb(255, 255, 255); 
+    border-radius: 50%; 
     width: 30px;
     height: 30px;
     display: flex;
@@ -119,6 +124,21 @@ border-radius: 5px;
     margin-left: 18px;
    
   }
+  .infopantallacheckout {
+    position: absolute;
+    background-color: #4c494b;
+    margin-top: 75px;
+    margin-left: 35%;
+    font-size: large;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: auto;
+    width: 300px;   
+    border-radius: 5px;
+    padding: 5px; 
+    text-align: center;
+  
+  }
   
   
  .infopantalla1,.infopantalla2{
@@ -159,7 +179,7 @@ border-radius: 5px;
   border: 1px solid #1E679A;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+  margin-top: 60px;
   width: 230px;
   height: auto;
   background-color: #ffffff;
@@ -205,29 +225,30 @@ border-radius: 5px;
   border: 1px solid #999999;
   position: relative;
   border-radius: 5px;
-  margin-left: 90px;
+  margin-left: 140px;
   
   }
   .producto2{
     cursor: pointer;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     padding:8px;
     background-color: #f5f5f5;
     border: 1px solid #999999;
     position: relative;
     border-radius: 5px;
-    
+    margin-left: 13%    
     }
  
   .productoseleccionado {
     background-color: #ffffff;
     border: 1px solid #999999;
     margin: 20px auto;
-    max-width: 500px;
+    max-width: 600px;
     padding: 10px;
     transition: transform 0.6s; 
     position: relative;
+    margin-top: 80px;
     }
     
     .volver{
@@ -250,6 +271,24 @@ border-radius: 5px;
       
       
     }
+    .eliminar{
+      float:center ;
+      font-weight: 600;
+      font-size: 12px;
+      color:#fb2727;
+      padding-top:1px;
+      padding-bottom:1px;
+      padding-left:4px;
+      padding-right:4px;
+      background-color:#bfbbbc;
+      border-color: #d8d8d8;
+      border-width: 3px;
+      border-style: solid;
+      border-radius:35px;
+      cursor: pointer;      
+      align-items: center;
+      margin-left: 50px;
+    }
   .btn-group1{
     align-items: center;
     margin-left: 190px;
@@ -260,4 +299,135 @@ border-radius: 5px;
     margin-left: 215px;
   }
   
+  .finalizar:hover {
+    background-color: #45a049;
+  }
+  .finalizar:active {
+    background-color: #3e8e41;
+  }
+  .botones-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   
+  .center-button {
+    flex: 1;
+    display: flex;
+    margin-left: 38%;
+  }
+  
+  .menuprincipal {
+    background-color: #472d17;
+    font-size: x-small;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 70px;
+    height: 40px;
+  }
+  
+  .finalizar {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+ 
+.btn {
+  width: 20px;
+  height: 20px;
+  margin-top: -30px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  margin: -20px 10px; 
+}
+
+.btn.decrement {
+  background-color: #f8d7da;
+}
+
+.btn.increment {
+  background-color: #d4edda;
+}
+.count { 
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 37%;
+}
+
+.count:hover {
+  background-color: #0056b3;
+}
+
+.count:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.muestra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; 
+}
+
+.cantidad{
+  margin-top: -4px;
+}
+
+/* EstilosProyecto.css */
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Establece la altura de la ventana para centrar verticalmente */
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
